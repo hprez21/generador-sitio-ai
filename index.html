@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Website Prompt Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="language-switcher">
+                <button id="lang-en" class="lang-btn active">EN</button>
+                <button id="lang-es" class="lang-btn">ES</button>
+            </div>
+            <h1 id="main-title">AI Website Prompt Generator</h1>
+            <p id="subtitle">Create detailed prompts to generate your perfect website with AI</p>
+        </header>
+
+        <main>
+            <form id="website-form" class="form-container">
+                <!-- Business Information Section -->
+                <section class="form-section">
+                    <h2 id="business-info-title">Business Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="business-name" id="business-name-label">Business Name</label>
+                        <input type="text" id="business-name" placeholder="Enter your business name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="business-description" id="business-description-label">Business Description</label>
+                        <textarea id="business-description" rows="3" placeholder="Briefly describe what your business does"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="industry" id="industry-label">Industry</label>
+                        <select id="industry">
+                            <option value="">Select industry</option>
+                            <option value="technology">Technology</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                            <option value="retail">Retail</option>
+                            <option value="restaurant">Restaurant/Food</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="finance">Finance</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="creative">Creative/Design</option>
+                            <option value="fitness">Fitness/Wellness</option>
+                            <option value="travel">Travel/Tourism</option>
+                            <option value="automotive">Automotive</option>
+                            <option value="legal">Legal</option>
+                            <option value="nonprofit">Non-profit</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Website Type Section -->
+                <section class="form-section">
+                    <h2 id="website-type-title">Website Type</h2>
+                    
+                    <div class="form-group">
+                        <label for="website-type" id="website-type-label">Type of Website</label>
+                        <select id="website-type" required>
+                            <option value="">Select website type</option>
+                            <option value="business">Business/Corporate</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="portfolio">Portfolio</option>
+                            <option value="blog">Blog</option>
+                            <option value="landing">Landing Page</option>
+                            <option value="personal">Personal Website</option>
+                            <option value="nonprofit">Non-profit</option>
+                            <option value="educational">Educational</option>
+                            <option value="news">News/Magazine</option>
+                            <option value="community">Community/Forum</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="target-audience" id="target-audience-label">Target Audience</label>
+                        <input type="text" id="target-audience" placeholder="e.g., young professionals, families, seniors">
+                    </div>
+                </section>
+
+                <!-- Sections and Features -->
+                <section class="form-section">
+                    <h2 id="sections-features-title">Sections and Features</h2>
+                    
+                    <div class="form-group">
+                        <label id="sections-label">Required Sections (check all that apply)</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="home" checked> <span data-translate="home">Home</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="about"> <span data-translate="about">About Us</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="services"> <span data-translate="services">Services</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="products"> <span data-translate="products">Products</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="portfolio"> <span data-translate="portfolio">Portfolio</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="testimonials"> <span data-translate="testimonials">Testimonials</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="team"> <span data-translate="team">Team</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="blog"> <span data-translate="blog">Blog</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="contact"> <span data-translate="contact">Contact</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="faq"> <span data-translate="faq">FAQ</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="gallery"> <span data-translate="gallery">Gallery</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="pricing"> <span data-translate="pricing">Pricing</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="features-label">Special Features (check all that apply)</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="contact-form"> <span data-translate="contact-form">Contact Form</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="newsletter"> <span data-translate="newsletter">Newsletter Signup</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="social-media"> <span data-translate="social-media">Social Media Links</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="search"> <span data-translate="search">Search Functionality</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="booking"> <span data-translate="booking">Online Booking</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="chat"> <span data-translate="chat">Live Chat</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="multilingual"> <span data-translate="multilingual">Multi-language Support</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="ecommerce-cart"> <span data-translate="ecommerce-cart">Shopping Cart</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="user-accounts"> <span data-translate="user-accounts">User Accounts/Login</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" value="payment"> <span data-translate="payment">Payment Integration</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Design and Style -->
+                <section class="form-section">
+                    <h2 id="design-style-title">Design and Style</h2>
+                    
+                    <div class="form-group">
+                        <label for="design-style" id="design-style-label">Design Style</label>
+                        <select id="design-style">
+                            <option value="">Select design style</option>
+                            <option value="modern">Modern</option>
+                            <option value="minimalist">Minimalist</option>
+                            <option value="classic">Classic</option>
+                            <option value="creative">Creative</option>
+                            <option value="professional">Professional</option>
+                            <option value="playful">Playful</option>
+                            <option value="elegant">Elegant</option>
+                            <option value="bold">Bold</option>
+                            <option value="vintage">Vintage</option>
+                            <option value="futuristic">Futuristic</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color-scheme" id="color-scheme-label">Color Scheme Preference</label>
+                        <input type="text" id="color-scheme" placeholder="e.g., blue and white, earth tones, vibrant colors">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="layout" id="layout-label">Layout Preference</label>
+                        <select id="layout">
+                            <option value="">Select layout</option>
+                            <option value="single-page">Single Page</option>
+                            <option value="multi-page">Multi-page</option>
+                            <option value="grid-based">Grid-based</option>
+                            <option value="full-width">Full-width</option>
+                            <option value="sidebar">With Sidebar</option>
+                            <option value="split-screen">Split Screen</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Technical Requirements -->
+                <section class="form-section">
+                    <h2 id="technical-title">Technical Requirements</h2>
+                    
+                    <div class="form-group">
+                        <label for="responsive" id="responsive-label">Responsive Design</label>
+                        <select id="responsive">
+                            <option value="yes">Yes (Mobile-friendly)</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="seo" id="seo-label">SEO Optimization</label>
+                        <select id="seo">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accessibility" id="accessibility-label">Accessibility Features</label>
+                        <select id="accessibility">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Additional Requirements -->
+                <section class="form-section">
+                    <h2 id="additional-title">Additional Requirements</h2>
+                    
+                    <div class="form-group">
+                        <label for="special-requirements" id="special-requirements-label">Special Requirements or Features</label>
+                        <textarea id="special-requirements" rows="3" placeholder="Any specific features, integrations, or requirements not covered above"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inspiration" id="inspiration-label">Inspiration or Reference Websites</label>
+                        <textarea id="inspiration" rows="2" placeholder="List any websites you like or want to use as inspiration"></textarea>
+                    </div>
+                </section>
+
+                <button type="submit" id="generate-btn" class="generate-btn">Generate AI Prompt</button>
+            </form>
+
+            <!-- Generated Prompt Section -->
+            <section id="prompt-section" class="prompt-section hidden">
+                <h2 id="generated-prompt-title">Generated AI Prompt</h2>
+                <div class="prompt-container">
+                    <pre id="generated-prompt"></pre>
+                    <button id="copy-btn" class="copy-btn">Copy to Clipboard</button>
+                </div>
+                <div class="prompt-actions">
+                    <button id="new-prompt-btn" class="secondary-btn">Generate New Prompt</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p id="footer-text">&copy; 2025 AI Website Prompt Generator. Made to help you create better websites with AI.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
